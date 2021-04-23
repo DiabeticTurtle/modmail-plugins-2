@@ -190,6 +190,9 @@ class TagsPlugin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, msg: discord.Message):
+        if msg.author.bot and msg.content.startswith("Please set your Nightscout"):
+            await ctx.send("If you'd like to learn more about Nightscout, type `?nightscout`.")
+            return
         if not msg.content.startswith(self.bot.prefix) or msg.author.bot:
             return
         
