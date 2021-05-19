@@ -26,4 +26,4 @@ class Log:
             embed.add_field(
                 name="User", value=f"<@{user.id}> `({user.name}#{user.discriminator})`"
             )
-    @cog.listener
+    
