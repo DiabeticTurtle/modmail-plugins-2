@@ -12,8 +12,6 @@ class Moderation(commands.Cog):
     level in order to run any of these commands.*_ _
     """
 
-    
-
     def __init__(self, bot):
         self.bot = bot
         self.db = bot.api.get_plugin_partition(self)
