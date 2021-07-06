@@ -419,6 +419,7 @@ class Moderation(commands.Cog):
                     'If you are sure and responsible about what might happen send "Yes, do as I say!". '
                     "Otherwise, send anything else to abort.\n"
                     "**Unexpected bad things might happen if you decide to continue!**"
+                    "it legit just re-creates the channel."
                 ),
                 color=discord.Color.red(),
             )
@@ -461,17 +462,7 @@ class Moderation(commands.Cog):
                     ).set_footer(text="Please fix the permissions.")
                 )
 
-            await new_channel.send(
-                embed=discord.Embed(
-                    title="Nuke",
-                    description="This channel has been nuked!",
-                    color=self.bot.main_color,
-                )
-                .set_image(
-                    url="https://cdn.discordapp.com/attachments/600843048724987925/600843407228928011/tenor.gif"
-                )
-                .set_footer(text=f"This is the {case} case.")
-            )
+
 
             await self.log(
                 guild=ctx.guild,
