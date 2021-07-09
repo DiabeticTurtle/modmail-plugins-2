@@ -231,7 +231,7 @@ class Moderation(commands.Cog):
         msg = f"You have been banned from {ctx.guild.name}" + (
             f" for: {reason}" if reason else ". If you have any questions please join this server: https://discord.gg/3Dfh45GTWq and ask here."
         )
-
+ 
         try:
             await member.send(msg)
         except discord.errors.Forbidden:
